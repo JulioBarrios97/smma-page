@@ -1,0 +1,69 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Diseño de Tiendas Personalizadas",
+    description:
+      "Eleva la apariencia de tu tienda online con diseños únicos y atractivos que se destacarán en un mercado saturado.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "Posicionamiento SEO Orgánico",
+    description:
+      "Aumenta tu visibilidad en los motores de búsqueda y atrae tráfico altamente relevante a tu tienda.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Publicidad de Pago Estratégica",
+    description:
+      "Alcanza a tus clientes ideales en el momento adecuado y maximiza tu retorno de inversión con estrategias publicitarias inteligentes.",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Optimización de Velocidad y Rendimiento",
+    description:
+      "Una tienda que carga lentamente espanta a los clientes. Agilizaremos tu sitio para una experiencia fluida en todos los dispositivos, logrando que los visitantes se conviertan en clientes satisfechos.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "Análisis y Estrategia Personalizada",
+    description:
+      "Realizaremos un análisis de tus necesidades y objetivos, crearemos una estrategia personalizada que garantice que tu tienda ecommerce alcance su máximo potencial.",
+    icon: "bx:bxs-file-find",
+  },
+  {
+    title: "Mantenimiento y Soporte Continuo",
+    description:
+      "No estarás solo después del lanzamiento. Proporcionamos mantenimiento constante y soporte técnico para asegurarnos que tu tienda funcione sin problemas y esté siempre actualizada.",
+    icon: "bx:bxs-user",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Calidad que supera las expectativas
+  </h2>
+  <br><br>
+  <p class="text-lg mt-4 font-bold text-slate-600">
+    ¿Que ofrecemos?
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
