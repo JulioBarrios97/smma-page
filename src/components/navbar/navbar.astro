@@ -5,22 +5,22 @@ import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
+  // {
+  //   title: "Features",
+  //   path: "#",
+  //   children: [
+  //     { title: "Action", path: "/" },
+  //     { title: "Another action", path: "#" },
+  //     { title: "Dropdown Submenu", path: "#" },
+  //     { title: "404 Page", path: "/404" },
+  //   ],
+  // },
   {
-    title: "Features",
-    path: "#",
-    children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
-    ],
-  },
-  {
-    title: "Pricing",
+    title: "Precios",
     path: "/pricing",
   },
   {
-    title: "About",
+    title: "Nosotros",
     path: "/about",
   },
   {
@@ -28,7 +28,7 @@ const menuitems = [
     path: "/blog",
   },
   {
-    title: "Contact",
+    title: "Contacto",
     path: "/contact",
   },
 ];
@@ -38,10 +38,12 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
-          >
+        <a href="/" class="text-lg">
+          <img
+            src="/src/assets/logo2-removebg-preview.png"
+            alt="Logo"
+            class="mr-2 logo-img"
+          />
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
@@ -74,7 +76,7 @@ const menuitems = [
           }
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
+          <!-- <Link href="#" style="muted" block size="md">Log in</Link> -->
           <Link href="#" size="md" block>Sign up</Link>
         </div>
       </MenuItems>
@@ -85,4 +87,10 @@ const menuitems = [
       </div>
     </div>
   </header>
+  <style>
+    .logo-img {
+      width: 100px; /* Ajusta el ancho según tus necesidades */
+      height: auto; /* Esto mantiene la proporción de la imagen */
+    }
+  </style>
 </Container>
