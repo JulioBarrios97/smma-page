@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import { Picture } from "@astrojs/image/components";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
@@ -34,17 +33,17 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         <div class="grid grid-cols-2 gap-5">
           <img
             class="object-cover w-full h-56 col-span-2 rounded shadow-lg"
-            src="/src/assets/about1.jpg"
+            src="/about1.jpg"
             alt=""
           />
           <img
             class="object-cover w-full h-48 rounded shadow-lg"
-            src="/src/assets/about2.jpg"
+            src="/about2.jpg"
             alt=""
           />
           <img
             class="object-cover w-full h-48 rounded shadow-lg"
-            src="/src/assets/about3.jpg"
+            src="/about3.jpg"
             alt=""
           />
         </div>

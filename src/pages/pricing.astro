@@ -3,18 +3,18 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import PricingCard from "@components/pricing.astro";
+import Link from "../components/ui/link.astro";
 
 const pricing = [
   {
-    name: "WebStart",
-    price: "$800",
+    name: "Starter",
+    price: "$400",
     popular: false,
     features: [
-      "Desarrollo web",
-      "Diseño personalizado",
-      "Despliegue y migración",
-      "Optimización móvil",
-      "Velocidad web",
+      "Keyword research",
+      "Optimización on-page",
+      "Local SEO",
+      "Reportes de métricas",
     ],
     button: {
       text: "Contáctenos",
@@ -22,19 +22,18 @@ const pricing = [
     },
   },
   {
-    name: "SEOPro",
+    name: "Advanced",
     price: {
-      monthly: "$700",
+      monthly: "$800",
       annual: "$16",
       discount: "",
-      original: "/mes",
+      // original: "/mes",
     },
     popular: true,
     features: [
-      "Keyword Research",
-      "SEO on Page",
-      "Link Building",
-      "SEO Técnico",
+      "Paquete Starter incluido",
+      "Link building",
+      "Análisis de competidores",
       "Blog y Marketing de contenidos",
     ],
     button: {
@@ -43,15 +42,15 @@ const pricing = [
     },
   },
   {
-    name: "CustomCraft",
-    price: "Personalizado",
+    name: "Pro",
+    price: "$1500",
     popular: false,
     features: [
-      "Estrategias Paid Media",
-      "Soporte técnico",
+      "Paquete Advanced incluido",
+      "Auditoria técnica",
       "Community managment",
-      "Frontend con código",
-      "Sub paquetes",
+      "Consultoria personalizada",
+      "Estrategia de contenido premium",
     ],
     button: {
       text: "Contáctenos",
@@ -64,7 +63,7 @@ const pricing = [
 <Layout title="Pricing">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Precios</Fragment>
+      <Fragment slot="title">SEO</Fragment>
       <Fragment slot="desc">
         Precios simples y predecibles. Sin sorpresas.
       </Fragment>
@@ -74,4 +73,145 @@ const pricing = [
       {pricing.map((item) => <PricingCard plan={item} />)}
     </div>
   </Container>
+
+  <!-- Container for demo purpose -->
+  <div class="container my-24 mx-auto md:px-6">
+    <!-- Section: Design Block -->
+    <section class="mb-32 text-center md:text-left">
+      <div
+        class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+        <div class="flex flex-wrap items-center">
+          <div
+            class="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/ecommerce/vertical/126.jpg"
+              alt="Trendy Pants and Shoes"
+              class="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+            />
+          </div>
+          <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+            <div class="px-6 py-12 md:px-12">
+              <h2 class="mb-6 pb-2 text-3xl text-white font-bold">
+                Tu éxito online nos importa
+              </h2>
+              <p class="mb-6 pb-2 text-neutral-500 dark:text-neutral-300">
+                Tu éxito en línea es nuestra prioridad. Descubre cómo podemos
+                lograrlo juntos a través de nuestros otros servicios. ¡Conversa
+                con nosotros hoy!
+              </p>
+              <div class="mb-6 flex flex-wrap">
+                <div class="mb-4 w-full md:w-4/12">
+                  <p class="text-white flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      class="mr-3 h-5 w-5 text-neutral-900 dark:text-neutral-50">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path></svg
+                    >Email marketing
+                  </p>
+                </div>
+                <div class="mb-4 w-full md:w-4/12">
+                  <p class="text-white flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      class="mr-3 h-5 w-5 text-neutral-900 dark:text-neutral-50">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path></svg
+                    >Desarrollo web
+                  </p>
+                </div>
+                <div class="mb-4 w-full md:w-4/12">
+                  <p class="text-white flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      class="mr-3 h-5 w-5 text-neutral-900 dark:text-neutral-50">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path></svg
+                    >Diseño personalizado
+                  </p>
+                </div>
+                <div class="mb-4 w-full md:w-4/12">
+                  <p class="text-white flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      class="mr-3 h-5 w-5 text-neutral-900 dark:text-neutral-50">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path></svg
+                    >Mantenimiento y Soporte
+                  </p>
+                </div>
+                <div class="mb-4 w-full md:w-4/12">
+                  <p class="text-white flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      class="mr-3 h-5 w-5 text-neutral-900 dark:text-neutral-50">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path></svg
+                    >Paid Media
+                  </p>
+                </div>
+                <div class="mb-4 w-full md:w-4/12">
+                  <p class="text-white flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      class="mr-3 h-5 w-5 text-neutral-900 dark:text-neutral-50">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      ></path></svg
+                    >Community Managment
+                  </p>
+                </div>
+              </div>
+              <div class="flex mt-5">
+                <Link href="/contact" style="inverted">Empecemos!</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section: Design Block -->
+  </div>
+  <!-- Container for demo purpose -->
 </Layout>
